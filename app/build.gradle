@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'com.huawei.agconnect'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.hms.testonesignal"
+        minSdkVersion 18
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resConfigs "en", "zh-rCN"
+        manifestPlaceholders = [
+                                onesignal_app_id: "2f1d8e40-0328-44b6-962a-33b776368e6e",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: 'REMOTE'
+                                ]
+    }
+    signingConfigs {
+        release {
+            storeFile file('testonesignal.jks')
+            storePassword 'asdf1234'
+            keyPassword 'asdf1234'
+            keyAlias 'key0'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
+    implementation 'com.huawei.hms:push:5.0.0.300'
+    implementation 'com.onesignal:OneSignal:3.15.1'
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestOneSignal</string>
+    <string name="title">One Signal Push service</string>
+    <string name="features">1. Notification message  \n - With large icon \n\n 2. Data message  \n  - With image options \n\n 3.In-App message \n\n 4. A/B tests   </string>
+</resources>
