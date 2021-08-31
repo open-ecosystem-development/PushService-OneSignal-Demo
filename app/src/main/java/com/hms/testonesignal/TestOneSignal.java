@@ -26,6 +26,8 @@ public class TestOneSignal extends Application {
         OneSignal.setSubscription(true);
         status.getPermissionStatus().getEnabled();
         status.getSubscriptionStatus().getSubscribed();
+        OneSignal.sendTag("user_name", "TestUser");
+        OneSignal.addTrigger("location_prompt", "true");
         Log.d("One signal", "User ID hmm "+ status.getSubscriptionStatus().getUserId());
         Log.d("One signal", "Push Token hmm "+ status.getSubscriptionStatus().getUserId());
         Log.d("One signal", "Is subscribed "+ status.getSubscriptionStatus().getSubscribed());
@@ -33,6 +35,7 @@ public class TestOneSignal extends Application {
         Log.d("One signal", "User ID "+ userId);
         String pushToken = OneSignal.getPermissionSubscriptionState().getSubscriptionStatus().getPushToken();
         Log.d("One signal", "Push token "+ pushToken);
+
 
     }
 }
