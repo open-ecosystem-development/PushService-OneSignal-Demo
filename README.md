@@ -2,7 +2,7 @@
 
 ## Table of Contents
  * [Introduction](#introduction)
- * [SDK setup](#sdk-setup)
+ * [SDK setup](#SDK-setup)
  * [Sending PUSH message](#sending-push-message)
  * [Question](#question) 
  * [References](#references)
