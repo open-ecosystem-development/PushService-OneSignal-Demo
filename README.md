@@ -2,7 +2,7 @@
 
 ## Table of Contents
  * [Introduction](#introduction)
- * [SDK setup](#SDK-setup)
+ * [OneSignal Huawei SDK setup](#OneSignal-Huawei-SDK-setup)
  * [Sending PUSH message](#sending-push-message)
  * [Question](#question) 
  * [References](#references)
