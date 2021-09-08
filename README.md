@@ -5,7 +5,6 @@
  * [Getting Started](#getting-started)
  * [Sending PUSH message](#sending-push-message)
  * [Question](#question) 
- * [References](#references)
  
 
 ## Introduction
