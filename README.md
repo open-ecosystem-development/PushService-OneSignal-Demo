@@ -15,10 +15,12 @@ This app demonstrates integration of OneSignal Push service through Huawei Push 
 ## Huawei - App Gallery Connect setup
    - Create Huawei developer account, if you don't have [from here](https://developer.huawei.com/consumer/en/). 
    - Create new project and app in App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/codelab/HMSPreparation/index.html#0).   
-   - Enable Huawei Push kit service in your app from Huawei App Gallery Connect.
+   - Enable Huawei Push kit service in your app from Huawei App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137).
 ## OneSignal setup
+   - Create OneSignal account from https://onesignal.com/ 
+   - Configure your OneSignal App's Huawei platform settings [Refer](https://documentation.onesignal.com/docs/authorize-onesignal-to-send-huawei-push).
 ## Client side - Android app
-1. Create OneSignal account from https://onesignal.com/ 
+   -   
 2.  Add Huawei configuration - agconnect-services.json file in your Android Studio project.
      Generate a Signing Certificate Fingerprint.
      https://developer.huawei.com/consumer/en/doc/distribution/app/agc-help-enabling-service-0000001146598793
