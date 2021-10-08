@@ -4,6 +4,7 @@
  * [Introduction](#introduction)
  * [Getting Started](#getting-started)
  * [Sending PUSH message](#sending-push-message)
+ * [License](#license) 
  * [Question](#question) 
  
 
@@ -26,6 +27,9 @@ This app demonstrates integration of OneSignal Push service through Huawei Push 
 ## Sending PUSH message
 Refer the link https://documentation.onesignal.com/docs/sending-notifications to send push notifications from the OneSignal Dashboard and for API details.  
 You can send notification message, data message, in-app message, A/B tests, automated message for selected audience by creating segments.
+
+## License
+This sample code for android is licensed under the [Apache License, version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## Question
 If you have a question 
