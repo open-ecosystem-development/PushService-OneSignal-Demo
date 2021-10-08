@@ -12,7 +12,7 @@
 This app demonstrates integration of OneSignal Push service through Huawei Push messaging service.
 
 ## Getting Started
-## Huawei - App Gallery Connect setup
+# Huawei - App Gallery Connect setup
    - Create Huawei developer account, if you don't have [from here](https://developer.huawei.com/consumer/en/). 
    - Create new project and app in App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/codelab/HMSPreparation/index.html#0).   
    - Enable Huawei Push kit service in your app from Huawei App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137).
