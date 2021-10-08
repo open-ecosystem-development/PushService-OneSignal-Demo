@@ -12,30 +12,30 @@
 This app demonstrates integration of OneSignal Push service through Huawei Push messaging service.
 
 ## Getting Started
-# Huawei - App Gallery Connect setup
+
+ **Huawei - App Gallery Connect setup**
    - Create Huawei developer account, if you don't have [from here](https://developer.huawei.com/consumer/en/). 
    - Create new project and app in App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/codelab/HMSPreparation/index.html#0).   
    - Enable Huawei Push kit service in your app from Huawei App Gallery Connect [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137).
-## OneSignal setup
-   - Create OneSignal account from https://onesignal.com/ 
+   
+ **OneSignal setup**
+   - Create OneSignal account [from here](https://onesignal.com/) 
    - Configure your OneSignal App's Huawei platform settings [Refer](https://documentation.onesignal.com/docs/authorize-onesignal-to-send-huawei-push).
-## Client side - Android app
-   -   
-2.  Add Huawei configuration - agconnect-services.json file in your Android Studio project.
-     Generate a Signing Certificate Fingerprint.
-     https://developer.huawei.com/consumer/en/doc/distribution/app/agc-help-enabling-service-0000001146598793
-3. Refactor package name of this demo code with your package name. 
-
-5. Add Huawei Gradle plugin and dependencies. Add OneSignal dependency. Sync gradle.
-6. Create a class that extends from HmsMessageService and add methods as per demo app.
-7. Run and test your app on Huawei device to make sure your device is subscribed to notifications as a Huawei device and can receive notifications sent from the 
-   OneSignal dashboard.
-8. Manage your users, messages, audience through OneSignal dashboard.
+   
+ **Android app - client side setup**
+   - Use this demo code and refactor it with your new package name.
+   - Go to Huawei App Gallery Connect, find your project. Go to Project Setting->General Information, in the App information, download agconnect-services.json file      and copy it to your app's root directory [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084). 
+   - In your app-level build.gradle file, configure your signing information and keystore file in the signingConfig.
+     Sync gradle.
+   - Run and test your app on Huawei device. 
+     OneSignal automatically creates device/channel record with unique ID when user opens app for the first time.
+     Make sure your device is subscribed to get notifications  and can receive notifications sent from the OneSignal dashboard.
+   - Manage your users, messages, audience through OneSignal dashboard.
 
 
 ## Sending PUSH message
-Refer the link https://documentation.onesignal.com/docs/sending-notifications to send push notifications from the OneSignal Dashboard and for API details.  
-You can send notification message, data message, in-app message, A/B tests, automated message for selected audience by creating segments.
+   For sending push notifications from the OneSignal Dashboard and API details, [Refer](https://documentation.onesignal.com/docs/sending-notifications).  
+   You can send notification message, data message, in-app message, A/B tests, automated message for selected audience by creating segments.
 
 ## License
 This sample code for android is licensed under the [Apache License, version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
