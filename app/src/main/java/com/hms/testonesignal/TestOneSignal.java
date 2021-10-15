@@ -24,7 +24,8 @@ import com.onesignal.OSPermissionSubscriptionState;
 import com.onesignal.OneSignal;
 
 public class TestOneSignal extends Application {
-    private static final String ONESIGNAL_APP_ID = "2f1d8e40-0328-44b6-962a-33b776368e6e";
+
+    private static final String ONE_SIGNAL = "OneSignal";
 
     @Override
     public void onCreate() {
@@ -38,20 +39,20 @@ public class TestOneSignal extends Application {
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
-      // OneSignal.setAppId(ONESIGNAL_APP_ID);
+     
         OSPermissionSubscriptionState status = OneSignal.getPermissionSubscriptionState();
         OneSignal.setSubscription(true);
         status.getPermissionStatus().getEnabled();
         status.getSubscriptionStatus().getSubscribed();
         OneSignal.sendTag("user_name", "TestUser");
         OneSignal.addTrigger("location_prompt", "true");
-        Log.d("One signal", "User ID hmm "+ status.getSubscriptionStatus().getUserId());
-        Log.d("One signal", "Push Token hmm "+ status.getSubscriptionStatus().getUserId());
-        Log.d("One signal", "Is subscribed "+ status.getSubscriptionStatus().getSubscribed());
+        Log.d(ONE_SIGNAL, "User ID hmm "+ status.getSubscriptionStatus().getUserId());
+        Log.d(ONE_SIGNAL, "Push Token hmm "+ status.getSubscriptionStatus().getUserId());
+        Log.d(ONE_SIGNAL, "Is subscribed "+ status.getSubscriptionStatus().getSubscribed());
         String userId = OneSignal.getPermissionSubscriptionState().getSubscriptionStatus().getPushToken();
-        Log.d("One signal", "User ID "+ userId);
+        Log.d(ONE_SIGNAL, "User ID "+ userId);
         String pushToken = OneSignal.getPermissionSubscriptionState().getSubscriptionStatus().getPushToken();
-        Log.d("One signal", "Push token "+ pushToken);
+        Log.d(ONE_SIGNAL, "Push token "+ pushToken);
 
 
     }
