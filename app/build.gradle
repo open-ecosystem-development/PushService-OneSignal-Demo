@@ -35,22 +35,28 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resConfigs "en", "zh-rCN"
-        manifestPlaceholders = [
-                                onesignal_app_id: "2f1d8e40-0328-44b6-962a-33b776368e6e",
+        manifestPlaceholders = [  // put your own Onesignal app id here
+                                onesignal_app_id: "xxxx-xxxx-xxxx-xxxx-xxxxx",
                                 // Project number pulled from dashboard, local value is ignored.
                                 onesignal_google_project_number: 'REMOTE'
                                 ]
     }
-    signingConfigs {
+    signingConfigs {  //Please replace with your own signature credential
         release {
-            storeFile file('testonesignal.jks')
-            storePassword 'asdf1234'
-            keyPassword 'asdf1234'
-            keyAlias 'key0'
+            storeFile file('xxxxxx.jks')
+            storePassword 'xxxxxxxx'
+            keyPassword 'xxxxx'
+            keyAlias 'xxxx'
+            v1SigningEnabled true
+            v2SigningEnabled true
         }
     }
 
     buildTypes {
+            debug {
+            signingConfig signingConfigs.config
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
