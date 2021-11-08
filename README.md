@@ -24,7 +24,7 @@ This app demonstrates integration of OneSignal Push service through Huawei Push 
    
  **Android app - client side setup**
    - Use this demo code and refactor it with your new package name.
-   - Go to Huawei App Gallery Connect, find your project. Go to Project Setting->General Information, in the App information, download agconnect-services.json file      and copy it to your app's root directory [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084). 
+   - Go to Huawei App Gallery Connect, find your project. Go to Project Setting->General Information, in the App information, download agconnect-services.json file      and copy it to your application's root directory [Refer](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-integrating-sdk-0000001050040084). 
    - In your app-level build.gradle file, configure your signing information and keystore file in the signingConfig.
      Sync gradle.
    - Run and test your app on Huawei device. 
