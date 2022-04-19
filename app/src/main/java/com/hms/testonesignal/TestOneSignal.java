@@ -20,12 +20,13 @@ package com.hms.testonesignal;
 import android.app.Application;
 import android.util.Log;
 
-import com.onesignal.OSPermissionSubscriptionState;
+import com.onesignal.OSDeviceState;
 import com.onesignal.OneSignal;
 
 public class TestOneSignal extends Application {
 
     private static final String ONE_SIGNAL = "OneSignal";
+    private static final String ONESIGNAL_APP_ID = "########-####-####-####-############";
 
     @Override
     public void onCreate() {
@@ -35,24 +36,24 @@ public class TestOneSignal extends Application {
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
 
         // OneSignal Initialization
-        OneSignal.startInit(this)
-                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-                .unsubscribeWhenNotificationsAreDisabled(true)
-                .init();
-     
-        OSPermissionSubscriptionState status = OneSignal.getPermissionSubscriptionState();
-        OneSignal.setSubscription(true);
-        status.getPermissionStatus().getEnabled();
-        status.getSubscriptionStatus().getSubscribed();
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
+
+        // Set userId based on application data
+        String externalUserId = "12345";
+        OneSignal.setExternalUserId(externalUserId);
+
+
+        // Send some tags & triggers
         OneSignal.sendTag("user_name", "TestUser");
         OneSignal.addTrigger("location_prompt", "true");
-        Log.d(ONE_SIGNAL, "User ID hmm "+ status.getSubscriptionStatus().getUserId());
-        Log.d(ONE_SIGNAL, "Push Token hmm "+ status.getSubscriptionStatus().getUserId());
-        Log.d(ONE_SIGNAL, "Is subscribed "+ status.getSubscriptionStatus().getSubscribed());
-        String userId = OneSignal.getPermissionSubscriptionState().getSubscriptionStatus().getPushToken();
-        Log.d(ONE_SIGNAL, "User ID "+ userId);
-        String pushToken = OneSignal.getPermissionSubscriptionState().getSubscriptionStatus().getPushToken();
-        Log.d(ONE_SIGNAL, "Push token "+ pushToken);
+
+        // Display Device State
+        OSDeviceState device = OneSignal.getDeviceState();
+        Log.d(ONE_SIGNAL, "User ID "+ device.getUserId());
+        Log.d(ONE_SIGNAL, "Push Token "+ device.getPushToken());
+        Log.d(ONE_SIGNAL, "Is subscribed "+ device.isSubscribed());
+
 
 
     }

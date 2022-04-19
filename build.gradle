@@ -30,8 +30,8 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.huawei.agconnect:agcp:1.5.2.300'
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4'
+        classpath 'com.huawei.agconnect:agcp:1.6.5.300'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0'
 
     }
 }
