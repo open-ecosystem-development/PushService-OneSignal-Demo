@@ -82,5 +82,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
     implementation 'com.huawei.hms:push:6.3.0.304'
-    implementation 'com.onesignal:OneSignal:4.7.1'
+    implementation 'com.onesignal:OneSignal:4.7.2'
 }
