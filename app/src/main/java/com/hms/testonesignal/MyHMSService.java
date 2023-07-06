@@ -17,15 +17,17 @@
 
 package com.hms.testonesignal;
 
+import android.os.Bundle;
+
 import com.huawei.hms.push.RemoteMessage;
 import com.huawei.hms.push.HmsMessageService;
 import com.onesignal.OneSignalHmsEventBridge;
 
 public class MyHMSService  extends HmsMessageService {
-    public void onNewToken(String token) {
+    public void onNewToken(String token, Bundle bundle) {
         // ...
         // Forward event on to OneSignal SDK
-        OneSignalHmsEventBridge.onNewToken(this, token);
+        OneSignalHmsEventBridge.onNewToken(this, token, bundle);
     }
 
     @Override
